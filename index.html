@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SkillUP</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Karla:wght@300;400;500;600;700;800&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./assets/css/styles.css" />
+</head>
+<body >
+  <div id="app">
+
+   <header class="topbar" role="banner">
+  <div class="container topbar__inner">
+
+    <a class="brand" href="#" aria-label="SkillUP home">
+      <svg class="brand__icon" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M12 3L1 8l11 5 9-4.09V17h2V8L12 3zM3 13v3c3 2 7 2 9 2s6 0 9-2v-3l-9 4-9-4z" fill="#33363F"/>
+      </svg>
+      <span class="brand__name">SkillUP</span>
+    </a>
+
+    <div class="actions">
+      <form class="search" role="search" onsubmit="return false;">
+        <input class="search__input" type="search" placeholder="Search courses, skills, instructors…" />
+        <button class="search__btn" aria-label="Search">
+          <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="11" cy="11" r="7" stroke="#5C5C5C" stroke-width="2" fill="none"/>
+            <path d="M20 20l-3.5-3.5" stroke="#5C5C5C" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </form>
+
+      <button class="icon-btn" aria-label="Cart">
+        <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M6 6h15l-1.5 8.5H7.5L6 6zM7 6L6 3H3" stroke="#5C5C5C" stroke-width="1.7" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="9" cy="19" r="1.3" fill="#5C5C5C"/><circle cx="17" cy="19" r="1.3" fill="#5C5C5C"/>
+        </svg>
+      </button>
+      <button class="icon-btn" aria-label="Wishlist">
+        <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M12 21s-7-4.5-7-10a4 4 0 0 1 7-2 4 4 0 0 1 7 2c0 5.5-7 10-7 10z" fill="none" stroke="#5C5C5C" stroke-width="1.7"/>
+        </svg>
+      </button>
+      <div class="auth">
+        <a href="#" class="auth__link auth__link--muted">Login</a>
+        <span class="auth__sep">|</span>
+        <a href="#" class="auth__link auth__link--muted">Sign Up</a>
+      </div>
+    </div>
+
+    
+
+    <nav class="nav-bottom" aria-label="Main">
+      <button class="nav-cat">
+        <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M3 6h18M3 12h18M3 18h18" stroke="#333" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        <span>Category</span>
+      </button>
+      <a class="nav__link" href="#">Live Classes</a>
+      <a class="nav__link" href="#">Courses</a>
+      <a class="nav__link" href="#">Career</a>
+      <a class="nav__link" href="membership.html">Membership</a>
+      <a class="nav__link" href="#">About Us</a>
+      <a class="nav__link" href="#">Support</a>
+    </nav>
+
+  </div>
+</header>
+
+    <section class="hero">
+  <div class="container hero__grid">
+    <!-- ด้านซ้าย: ข้อความ -->
+    <div class="hero__copy">
+      <h1 class="hero__title">Upskill Online, Advance Your Future</h1>
+      <p class="hero__subtitle">
+        Learn online with flexible, expert-led courses designed to boost your skills,
+        grow your knowledge, and open doors to new career opportunities.
+      </p>
+      <a href="#" class="btn btn--pill hero__cta">
+        <span class="btn__text">Start Learning</span>
+        <span class="btn__circle">
+        <svg width="20" height="16" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M6 9l6 6 6-6" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round"/>
+        </svg>
+        </span>
+      </a>
+    </div>
+
+     <div class="hero__image">
+      <img src="./assets/images/Vector 201.png" alt="Online learning illustration" />
+    </div>
+  </div>
+</section>
+
+
+        <section class="instructors">
+  <div class="container instructors__box">
+    <h2 class="instructors__title">Most Popular Instructors</h2>
+
+    <div class="instructors__list">
+
+      <article class="instructor">
+        <div class="instructor__avatar">
+          <img src="./assets/images/Ellipse 3.png" alt="Dr. Arjun Mehta">
+        </div>
+        <h3 class="instructor__name">Dr. Arjun Mehta</h3>
+        <p class="instructor__role">Data Science &amp; AI</p>
+      </article>
+
+      <article class="instructor">
+        <div class="instructor__avatar">
+          <img src="./assets/images/Ellipse 4.png" alt="Prof. Kenji Sato">
+        </div>
+        <h3 class="instructor__name">Prof. Kenji Sato</h3>
+        <p class="instructor__role">Business Strategy &amp; Leadership</p>
+      </article>
+
+      <article class="instructor">
+        <div class="instructor__avatar">
+          <img src="./assets/images/Ellipse 5.png" alt="Ms. Linh Nguyen">
+        </div>
+        <h3 class="instructor__name">Ms. Linh Nguyen</h3>
+        <p class="instructor__role">Digital Marketing &amp; Communication</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="courses courses--hero">
+  <div class="container">
+    <h2 class="section-title">Popular Courses</h2>
+    <p class="section-desc">Choose from our best-selling courses.</p>
+    <div class="divider"></div>
+
+    <div class="courses__rail">
+
+      <button class="rail-btn rail-btn--prev" aria-label="Previous">&#10094;</button>
+
+  
+      <div class="rail" id="courses-rail" aria-label="Popular courses">
+        <article class="course-card">
+          <img src="./assets/images/Learn Web Development.png" alt="Learn Web Development">
+          <div class="course-body">
+            <h3 class="course-kicker">Learn Web Development</h3>
+            <p class="course-title">Complete Guide for Beginners</p>
+          </div>
+        </article>
+
+        <article class="course-card">
+          <img src="./assets/images/Data Science 101.png" alt="Data Science 101">
+          <div class="course-body">
+            <h3 class="course-kicker">Data Science 101</h3>
+            <p class="course-title">Get Started with Data Analysis</p>
+          </div>
+        </article>
+
+        <article class="course-card">
+          <img src="./assets/images/Master Digital Marketing.png" alt="Master Digital Marketing">
+          <div class="course-body">
+            <h3 class="course-kicker">Master Digital Marketing</h3>
+            <p class="course-title">Boost Your Business Online</p>
+          </div>
+        </article>
+
+        <article class="course-card">
+          <img src="./assets/images/Business Strategy.png" alt="Business Strategy">
+          <div class="course-body">
+            <h3 class="course-kicker">Business Strategy</h3>
+            <p class="course-title">Strategy &amp; Leadership</p>
+          </div>
+        </article>
+
+      </div>
+
+      <button class="rail-btn rail-btn--next" aria-label="Next">&#10095;</button>
+    </div>
+  </div>
+</section>
+
+
+<section class="testimonials">
+  <div class="container">
+    <h2 class="section-title">Testimonials</h2>
+
+    <div class="testimonials__list">
+      <!-- Testimonial 1 -->
+      <article class="testimonial-card">
+        <div class="testimonial-user">
+          <img src="./assets/images/Emily Johnson.png" alt="Emily Johnson">
+          <span class="name">Emily Johnson</span>
+        </div>
+        <p class="testimonial-text">
+          A fantastic experience with hands-on projects.
+        </p>
+        <span class="stars">★★★★★</span>
+      </article>
+
+    
+      <article class="testimonial-card">
+        <div class="testimonial-user">
+          <img src="./assets/images/Michael Brown.png" alt="Michael Brown">
+          <span class="name">Michael Brown</span>
+        </div>
+        <p class="testimonial-text">
+          Loved every minute of this course! Learned a lot.
+        </p>
+        <span class="stars">★★★★★</span>
+      </article>
+
+      <article class="testimonial-card">
+        <div class="testimonial-user">
+          <img src="./assets/images/Sarah Davis.png" alt="Sarah Davis">
+          <span class="name">Sarah Davis</span>
+        </div>
+        <p class="testimonial-text">
+          Very insightful and practical.
+        </p>
+        <span class="stars">★★★★★</span>
+      </article>
+    </div>
+  </div>
+</section>
+
+       <section class="students-say" id="students-say">
+  <div class="container">
+
+    <header class="ss-head">
+      <h2 class="section-title">What Our Students Say</h2>
+      <p class="section-desc">Hear from those who have taken the leap.</p>
+    </header>
+
+    <div class="ss-grid">
+
+      <article class="ss-card">
+        <div class="ss-top">
+          <img class="ss-avatar" src="./assets/images/John Doe.png" alt="John Doe" />
+          <div class="ss-meta">
+            <div class="ss-name">John Doe</div>
+            <div class="ss-role">
+              <span class="ss-dot" aria-hidden="true"></span> Student
+            </div>
+          </div>
+        </div>
+
+        <p class="ss-text">
+          This course transformed my career! Highly recommend to everyone.
+        </p>
+
+        <div class="ss-tags">
+          <span class="tag">Certification</span>
+          <span class="tag">Career</span>
+        </div>
+      </article>
+
+
+      <article class="ss-card">
+        <div class="ss-top">
+          <img class="ss-avatar" src="./assets/images/Jane Smith.png" alt="Jane Smith" />
+          <div class="ss-meta">
+            <div class="ss-name">Jane Smith</div>
+            <div class="ss-role">
+              <span class="ss-dot" aria-hidden="true"></span> Student
+            </div>
+          </div>
+        </div>
+
+        <p class="ss-text">
+          Incredible insights! The instructors are very knowledgeable.
+        </p>
+
+        <div class="ss-tags">
+          <span class="tag">Insight</span>
+          <span class="tag">Skill</span>
+        </div>
+      </article>
+    </div>
+
+    <div class="center">
+      <a href="#" class="btn" style="border-radius:50px">Read More Reviews</a>
+    </div>
+  </div>
+</section>
+
+    <footer class="footer">
+  <div class="container">
+    <div class="footer__logo">
+      <a class="brand" href="#" >
+      <svg class="brand__icon1" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M12 3L1 8l11 5 9-4.09V17h2V8L12 3zM3 13v3c3 2 7 2 9 2s6 0 9-2v-3l-9 4-9-4z" fill="#ffffff"/>
+      </svg>
+      <span class="brand__name1">SkillUP</span>
+    </a>
+    </div>
+
+    <nav class="footer__nav">
+      <a href="#">Notice</a>
+      <a href="#">Terms of Use</a>
+      <a href="#">Privacy Policy</a>
+      <a href="#">FAQ</a>
+      <a href="#">Refund</a>
+      <a href="#">Cookie Policy</a>
+      <a href="#">Changing Cookie Settings</a>
+    </nav>
+
+    <hr class="footer__divider">
+
+    <div class="footer__contacts">
+      <span>Refund <a href="mailto:refund@skillup.com">refund@skillup.com</a></span>
+      <span>Support <a href="mailto:support@skillup.com">support@skillup.com</a></span>
+    </div>
+
+    <div class="footer__actions">
+      <button class="btn-light">CONTACT US</button>
+      <button class="btn-muted">REPORT</button>
+    </div>
+
+    <div class="footer__info">
+      SKILLUP EDUCATION CO., LTD. | Company Registration Number: 012-345-6789 | CEO Jayden Raksakul<br>
+      ABC Building, 5th Floor, Sukhumvit Road, Bangkok 10110, Thailand
+    </div>
+  </div>
+</footer>
+
+  </div>
+  <script src="./assets/js/main.js"></script>
+</body>
+</html>
