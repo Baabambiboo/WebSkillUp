@@ -12,7 +12,7 @@
 <body >
   <div id="app">
 
-   <header class="topbar" role="banner">
+<header class="topbar" role="banner">
   <div class="container topbar__inner">
 
     <a class="brand" href="#" aria-label="SkillUP home">
@@ -51,10 +51,9 @@
       </div>
     </div>
 
-    
-
     <nav class="nav-bottom" aria-label="Main">
-      <button class="nav-cat">
+    
+      <button class="nav-cat" id="btnCategory" aria-haspopup="true" aria-expanded="false" aria-controls="megaMenu">
         <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
           <path d="M3 6h18M3 12h18M3 18h18" stroke="#333" stroke-width="2" stroke-linecap="round"/>
         </svg>
@@ -68,8 +67,99 @@
       <a class="nav__link" href="#">Support</a>
     </nav>
 
+    <!-- ===== MEGA MENU (slide down) ===== -->
+    <div class="mega-menu" id="megaMenu" role="menu" aria-label="Categories">
+      <div class="mega-menu__grid container">
+        <div class="mega-col">
+          <a href="Technology&Data.html">Technology & Data</a>
+          <a href="#">Data Science & Analytics</a>
+          <a href="#">Software Development</a>
+          <a href="#">Cloud & DevOps</a>
+          <a href="#">AI & Machine Learning</a>
+          <a href="#">Cybersecurity</a>
+        </div>
+
+        <div class="mega-col">
+          <a href="#">Business</a>
+          <a href="#">Digital Marketing</a>
+          <a href="#">Project Management</a>
+          <a href="#">Finance & Investment</a>
+          <a href="#">Entrepreneurship</a>
+          <a href="#">Leadership & Strategy</a>
+        </div>
+
+        <div class="mega-col">
+          <a href="#">Design</a>
+          <a href="#">UX/UI Design</a>
+          <a href="#">Graphic Design</a>
+          <a href="#">Video Editing & Animation</a>
+          <a href="#">Content Creation</a>
+        </div>
+
+        <div class="mega-col">
+          <a href="#">Career</a>
+          <a href="#">Engineering Fundamentals</a>
+          <a href="#">Hospitality & Tourism</a>
+          <a href="#">Legal & Compliance</a>
+          <a href="#">Education & Teaching</a>
+        </div>
+
+        <div class="mega-col">
+          <a href="#">Soft Skills</a>
+          <a href="#">Communication</a>
+          <a href="#">Critical Thinking</a>
+          <a href="#">Collaboration</a>
+          <a href="#">Productivity & Time Management</a>
+        </div>
+
+        <div class="mega-col">
+          <a href="#">Language</a>
+          <a href="#">English for Work</a>
+          <a href="#">Chinese for Business</a>
+          <a href="#">Japanese for Career</a>
+          <a href="#">Business Communication</a>
+        </div>
+      </div>
+    </div>
+    
+
   </div>
 </header>
+
+<script>
+(function(){
+  const btn  = document.getElementById('btnCategory');
+  const menu = document.getElementById('megaMenu');
+  if(!btn || !menu) return;
+
+  const toggle = () => {
+    menu.classList.toggle('is-open');
+    btn.setAttribute('aria-expanded', menu.classList.contains('is-open'));
+  };
+
+  btn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    toggle();
+  });
+
+  
+  document.addEventListener('click', (e) => {
+    if(!menu.contains(e.target) && !btn.contains(e.target)){
+      menu.classList.remove('is-open');
+      btn.setAttribute('aria-expanded','false');
+    }
+  });
+
+ 
+  document.addEventListener('keydown', (e) => {
+    if(e.key === 'Escape'){
+      menu.classList.remove('is-open');
+      btn.setAttribute('aria-expanded','false');
+      btn.focus();
+    }
+  });
+})();
+</script>
 
     <section class="hero">
   <div class="container hero__grid">

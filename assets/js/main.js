@@ -20,7 +20,7 @@ window.addEventListener("scroll", () => {
   let index = cards.findIndex(c => c.classList.contains('plan--featured'));
   if (index < 0) index = 1;
 
-  // build dots
+ 
   cards.forEach((_, i) => {
     const dot = document.createElement('button');
     dot.type = 'button';
@@ -41,16 +41,16 @@ window.addEventListener("scroll", () => {
     index = (i + cards.length) % cards.length;
     cards[index].scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
     updateDots();
-    // disable buttons at edges only if not looping (here: allow looping)
+    
   }
 
-  // initial center
+
   setTimeout(() => go(index), 50);
 
   prevBtn.addEventListener('click', () => go(index - 1));
   nextBtn.addEventListener('click', () => go(index + 1));
 
-  // Keep index in sync when user swipes
+  
   let ticking = false;
   track.addEventListener('scroll', () => {
     if (ticking) return;
@@ -69,3 +69,18 @@ window.addEventListener("scroll", () => {
     ticking = true;
   }, { passive: true });
 })();
+
+const categoryBtn = document.getElementById("categoryBtn");
+const megaMenu = document.getElementById("megaMenu");
+
+categoryBtn.addEventListener("click", () => {
+  megaMenu.classList.toggle("active");
+});
+
+
+document.addEventListener("click", (e) => {
+  if (!categoryBtn.contains(e.target) && !megaMenu.contains(e.target)) {
+    megaMenu.classList.remove("active");
+  }
+});
+
